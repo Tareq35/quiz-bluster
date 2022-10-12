@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Courses = ({courses}) => {
-    const {logo, name, total}= courses;
+const Courses = ({course}) => {
+    const {logo, name, total}= course;
     return (
         <div>
             <img src={logo} alt="" />
