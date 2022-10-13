@@ -4,7 +4,8 @@ import image from '../../image/header-image.png';
 import Courses from '../Courses/Courses';
 
 const Home = () => {
-    const courses = useLoaderData();
+    const {data:courses} = useLoaderData();
+    // console.log(courses);
     return (
         <div>
             <div className='lg:flex w-8/12 mt-10 p-10 m-auto bg-lime-200'>

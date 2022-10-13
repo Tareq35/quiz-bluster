@@ -13,12 +13,17 @@ function App() {
       element: <Main></Main>,
       children: [
         {
-          path: '/',
-          loader: () => fetch('courses.json'),
+          path: '/home',
+          loader: async () => {
+            return fetch('https://openapi.programming-hero.com/api/quiz')
+          },
           element: <Home></Home>
         },
         {
           path: '/quiz/:courseId',
+          loader: async ({params}) => {
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.courseId}`)
+          },
           element: <Quiz></Quiz>
         },
         {
