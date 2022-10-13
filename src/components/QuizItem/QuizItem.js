@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Quiz from '../Quiz/Quiz';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -70,7 +69,7 @@ const QuizItem = ({ question, index }) => {
                 <div className='flex flex-col gap-2 mb-20'>
                     {
                         question.options.map((option, index) => (
-                            <button disabled={isDisable.length > 0} key={index} onClick={() => handleClick(option, index)} className={`cursor-pointer w-6/12 mx-auto flex border rounded-md border-slate-400 py-10 px-5 hover:bg-blue-100 ${isDisable[0]?.index === index && 'bg-blue-300'}`}>
+                            <button disabled={isDisable.length > 0} key={index} onClick={() => handleClick(option, index)} className={`shadow-md cursor-pointer w-6/12 mx-auto flex border rounded-md border-slate-400 py-10 px-5 hover:bg-blue-100 ${isDisable[0]?.index === index && 'bg-blue-300'}`}>
 
                                 <p className='font-semibold text-lg'>
                                     {option}
