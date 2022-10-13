@@ -3,8 +3,8 @@ import image from '../../image/not-found.jpg'
 
 const PageNotFound = () => {
     return (
-        <div>
-            <img className='w-5/12 m-auto' src={image} alt="" />
+        <div className='h-[90vh] flex items-center justify-center'>
+            <img className='w-7/12 ' src={image} alt="" />
             
         </div>
     );

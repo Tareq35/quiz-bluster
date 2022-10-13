@@ -20,6 +20,7 @@ const Home = () => {
                     </p>
                 </div>
             </div>
+            
             <div className='grid lg:grid-cols-2  gap-10 mt-20 w-8/12 mx-auto'>
                 {
                     courses.map(course => <Courses
