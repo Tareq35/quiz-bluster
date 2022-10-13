@@ -4,16 +4,20 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const QuizItem = ({ question, index }) => {
-    console.log(question, index);
 
     const [showCorrectAns, setShowCorrectAns] = useState(true)
     const [optionDisable, setOptionDisable] = useState([])
-    const [] = useState([])
+    // const [] = useState([])
 
-    if (optionDisable.length > 0) {
+    // if (optionDisable.length > 0) {
 
-        const isDisable = optionDisable.map(d => d.questionId === question.id)
-    }
+    //     const isDisable = optionDisable.map(d => d.questionId === question.id ? true : false)
+    //     console.log(isDisable);
+    // }
+
+    const isDisable = optionDisable.filter(d => d.questionId === question.id)
+    console.log(isDisable);
+    console.log(optionDisable);
 
     const notify = (ans, data) => {
         if (ans === 'right') {
@@ -76,7 +80,7 @@ const QuizItem = ({ question, index }) => {
                 <div className='flex flex-col gap-2 mb-20'>
                     {
                         question.options.map((option, index) => (
-                            <button disabled={true} key={index} onClick={() => handleClick(option, index)} className='cursor-pointer w-6/12 mx-auto flex border rounded-md border-slate-400 py-10 px-5 hover:bg-slate-100 focus:bg-lime-100'>
+                            <button disabled={isDisable.length > 0} key={index} onClick={() => handleClick(option, index)} className={`cursor-pointer w-6/12 mx-auto flex border rounded-md border-slate-400 py-10 px-5 hover:bg-blue-100 ${isDisable[0]?.index === index && 'bg-blue-300'}`}>
 
                                 <p>
                                     {option}
