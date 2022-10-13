@@ -1,8 +1,14 @@
-# Getting Started with Create React App
+# Welcome to Quiz Bluster
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ Live website link [Quiz Bluster](https://frabjous-pie-6235e6.netlify.app/).
 
-## Available Scripts
+## What did i learn from this project?
+
+1. React Router Dom
+2. Dynamic Route
+3. State Management
+4. Props Drilling
+5. Hooks (useLoaderData) etc.
 
 In the project directory, you can run:
 
