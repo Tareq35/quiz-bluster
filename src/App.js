@@ -21,13 +21,16 @@ function App() {
         },
         {
           path: '/quiz/:courseId',
-          loader: async ({params}) => {
+          loader: async ({ params }) => {
             return fetch(`https://openapi.programming-hero.com/api/quiz/${params.courseId}`)
           },
           element: <Quiz></Quiz>
         },
         {
           path: '/statistics',
+          loader: async () => {
+            return fetch('https://openapi.programming-hero.com/api/quiz')
+          },
           element: <Statistics></Statistics>
         },
         {
