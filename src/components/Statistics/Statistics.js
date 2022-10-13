@@ -4,7 +4,7 @@ import { Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'rec
 
 const Statistics = () => {
     const { data } = useLoaderData()
-    console.log(data);
+    
     return (
         <div className='flex items-center h-[90vh]'>
             <ResponsiveContainer width="90%" height="50%">

@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Courses = ({ course }) => {
-    // console.log(course)
 
     const { id, logo, name, total } = course;
     return (

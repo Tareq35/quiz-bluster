@@ -5,7 +5,6 @@ import QuizItem from '../QuizItem/QuizItem';
 const Quiz = () => {
     const {data:quiz} = useLoaderData();
 
-    // console.log(quiz);
     return (
         <div>
             <h1 className='text-center text-3xl font-bold my-10'>Questions of {quiz.name}</h1>
